@@ -32,90 +32,45 @@ class _MainContent extends StatelessWidget
 
     return Container
     (
-      padding: const EdgeInsets.only(left: 35, top: 50),
-      child: Column
+      padding: const EdgeInsets.only(left: 35, top: 20),
+      child: Padding
       (
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: 
-        [
-          Row
-          (
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: 
-            [
-              Text('03. ', style: GoogleFonts.robotoMono(fontSize: 25, color: Colors.greenAccent)),
-              Text('Projects I have developed', style: GoogleFonts.robotoMono(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold)),
-            ],
-          ),
-          const SizedBox(height: 30),
-          Container
-          (
-            padding: EdgeInsets.only(right: 100),
-            alignment: Alignment.centerRight,
-            child: Stack
+        padding: const EdgeInsets.only(right: 15),
+        child: Column
+        (
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: 
+          [
+            FittedBox
             (
-              children: 
-              [
-                size.width > 850
-                ? Image.asset('itg.png', width: 600, height: size.height * 0.3)
-                : Container(),
-                Container
-                (
-                  child: Column
-                  (
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: 
-                    [
-                      Text
-                      (
-                        'Featured Project',
-                        style: GoogleFonts.robotoMono(color: Colors.greenAccent, fontSize: 16)
-                      ),
-                      Text
-                      (
-                        'Temperature Tracking',
-                        style: GoogleFonts.inter(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)
-                      ),
-                      SizedBox(height: 20),
-                      Container
-                      (
-                        padding: EdgeInsets.all(20),
-                        width: 1200,
-                        height: size.height * 0.2,
-                        color: Colors.black.withOpacity(0.3),
-                        child: Text
-                        (
-                          'project info\n update lorem impsusd', 
-                          style: GoogleFonts.inter(fontSize: 19, color: Colors.grey),
-                          textAlign: TextAlign.end,
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ],
+              fit: BoxFit.contain,
+              child: Row
+              (
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: 
+                [
+                  Text('03. ', style: GoogleFonts.robotoMono(fontSize: 25, color: Colors.greenAccent)),
+                  Text('Projects I have developed', style: GoogleFonts.robotoMono(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold)),
+                ],
+              ),
             ),
-          ),
-          SizedBox(height: 50),
-          ConstrainedBox
-          (
-            constraints: BoxConstraints(maxWidth: 1200),
-            child: Container
+            const SizedBox(height: 30),
+            Container
             (
               padding: EdgeInsets.only(right: 100),
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.centerRight,
               child: Stack
               (
                 children: 
                 [
-                  size.width > 850
-                  ? Align(alignment: Alignment.centerRight, child: Image.asset('itg.png', width: 600, height: size.height * 0.3))
+                  size.width > 1200
+                  ? Image.asset('itg.png', width: 600, height: size.height * 0.35)
                   : Container(),
                   Container
                   (
                     child: Column
                     (
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: 
                       [
                         Text
@@ -125,7 +80,7 @@ class _MainContent extends StatelessWidget
                         ),
                         Text
                         (
-                          'Software Update',
+                          'Temperature Tracking',
                           style: GoogleFonts.inter(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)
                         ),
                         SizedBox(height: 20),
@@ -134,12 +89,30 @@ class _MainContent extends StatelessWidget
                           padding: EdgeInsets.all(20),
                           width: 1200,
                           height: size.height * 0.2,
-                          color: Colors.black.withOpacity(0.2),
-                          child: Text
+                          color: Colors.black.withOpacity(0.3),
+                          child: Column
                           (
-                            'project info\n update lorem impsusd', 
-                            style: GoogleFonts.inter(fontSize: 19, color: Colors.grey),
-                            textAlign: TextAlign.start,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: 
+                            [
+                              FittedBox
+                              (
+                                fit: BoxFit.contain,
+                                child: Text
+                                (
+                                  'Software to visualize and record on a database all temperatures\n read by 4 pyrometers installed along the line', 
+                                  style: GoogleFonts.inter(fontSize: 19, color: Colors.white),
+                                  textAlign: TextAlign.end,
+                                ),
+                              ),
+                              Flexible(child: SizedBox(height: 20)),
+                              Text
+                              (
+                                '• C#  • SQL database  • Sharp7 library • Siemens Step 7', 
+                                style: GoogleFonts.inter(fontSize: 12, color: Colors.greenAccent),
+                                textAlign: TextAlign.end,
+                              ),
+                            ],
                           ),
                         )
                       ],
@@ -148,8 +121,79 @@ class _MainContent extends StatelessWidget
                 ],
               ),
             ),
-          ),
-        ],
+            SizedBox(height: 50),
+            ConstrainedBox
+            (
+              constraints: BoxConstraints(maxWidth: 1200),
+              child: Container
+              (
+                padding: EdgeInsets.only(right: 100),
+                alignment: Alignment.centerLeft,
+                child: Stack
+                (
+                  children: 
+                  [
+                    size.width > 1200
+                    ? Align(alignment: Alignment.centerRight, child: Image.asset('sp.png', width: 600, height: size.height * 0.35))
+                    : Container(),
+                    Container
+                    (
+                      child: Column
+                      (
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: 
+                        [
+                          Text
+                          (
+                            'Featured Project',
+                            style: GoogleFonts.robotoMono(color: Colors.greenAccent, fontSize: 16)
+                          ),
+                          Text
+                          (
+                            'Software Update',
+                            style: GoogleFonts.inter(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)
+                          ),
+                          SizedBox(height: 20),
+                          Container
+                          (
+                            padding: EdgeInsets.all(20),
+                            width: 1200,
+                            height: size.height * 0.2,
+                            color: Colors.black.withOpacity(0.3),
+                            child: Column
+                            (
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: 
+                              [
+                                FittedBox
+                                (
+                                  fit: BoxFit.contain,
+                                  child: Text
+                                  (
+                                    'Update obsolete machine visualization software,\nimproved response time and troubleshooting issues by\nshowing operators a more organized UI', 
+                                    style: GoogleFonts.inter(fontSize: 19, color: Colors.white),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                ),
+                                Flexible(child: SizedBox(height: 20)),
+                                Text
+                                (
+                                  '• C#  • Sharp7 library • Siemens Step 7', 
+                                  style: GoogleFonts.inter(fontSize: 12, color: Colors.greenAccent),
+                                  textAlign: TextAlign.end,
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

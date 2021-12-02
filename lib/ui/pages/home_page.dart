@@ -55,6 +55,9 @@ class _PagesBar extends StatelessWidget
         direction: Axis.horizontal,
         children: 
         [
+          pageNumber('00.'),
+          pageName(pageProvider, 'Home', 0),
+          const SizedBox(width: 30),
           pageNumber('01.'),
           pageName(pageProvider, 'About', 1),
           const SizedBox(width: 30),

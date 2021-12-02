@@ -32,314 +32,308 @@ class _MainContent extends StatelessWidget
 
     return Container
     (
-      padding: const EdgeInsets.only(left: 35, top: 30),
-      child: Column
+      padding: const EdgeInsets.only(left: 35, top: 20),
+      child: Padding
       (
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: 
-        [
-          Row
-          (
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: 
-            [
-              Flexible(child: Text('01. ', style: GoogleFonts.robotoMono(fontSize: 25, color: Colors.greenAccent))),
-              Flexible(child: Text('About me', style: GoogleFonts.robotoMono(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold))),
-            ],
-          ),
-          SizedBox(height: 25),
-          Row
-          (
-            children: 
-            [
-              Flexible
-              (
-                child: ConstrainedBox
-                (
-                  constraints: const BoxConstraints(maxWidth: 750),
-                  child: Text
-                  (
-                    'Versatile controls engineer with expertise in Siemens and Beckhoff PLCs, as well as Motoman robots. Excellent communication ' +
-                    'and problem solving skills with the ability to handle complex projects.\n\n' +
-                    'Energetic and hardworking with the ability to multitask. Proficient in SQL databases and computer programming languages. '+
-                    'I\'m interested in design, develope and maintain industrial equipment and/or its software. ' +
-                    'I can program, test and modify new or existing production equipment.',
-                    maxLines: 12,
-                    overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.inter
-                    (
-                      color: Colors.grey, 
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-              ),
-              size.width > 950 
-              ? Flexible
-              (
-                child: Padding
-                (
-                  padding: const EdgeInsets.only(left: 50),
-                  child: Hero
-                  (
-                    tag: 'pic',
-                    child: ClipOval(child: Image.asset('me2.jpg', width: 350, height: 350)),
-                  ),
-                )
-              )
-              : SizedBox()
-            ],
-          ),
-          Flexible
-          (
-            child: Padding
+        padding: const EdgeInsets.only(right: 15),
+        child: Column
+        (
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: 
+          [
+            Row
             (
-              padding: const EdgeInsets.only(top: 20, bottom: 15),
-              child: Text('Main Skills', style: GoogleFonts.robotoMono(fontSize: 17, color: Colors.white, fontWeight: FontWeight.bold)),
-            )
-          ),
-          ConstrainedBox
-          (
-            constraints: BoxConstraints(maxWidth: 850),
-            child: Row
+              children: 
+              [
+                Text('01. ', style: GoogleFonts.robotoMono(fontSize: 25, color: Colors.greenAccent)),
+                Text('About me', style: GoogleFonts.robotoMono(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold)),
+              ],
+            ),
+            Flexible(child: SizedBox(height: 10)),
+            Row
             (
-              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: 
               [
                 Flexible
                 (
-                  child: Column
+                  child: ConstrainedBox
                   (
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: 
-                    [
-                      FittedBox
+                    constraints: const BoxConstraints(maxWidth: 750),
+                    child: Text
+                    (
+                      'Versatile controls engineer with expertise in Siemens and Beckhoff PLCs, as well as Motoman robots. Excellent communication ' +
+                      'and problem solving skills with the ability to handle complex projects.\n\n' +
+                      'Energetic and hardworking with the ability to multitask. Proficient in SQL databases and computer programming languages. '+
+                      'I\'m interested in design, develope and maintain industrial equipment and/or its software. ' +
+                      'I can program, test and modify new or existing production equipment.',
+                      maxLines: 12,
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.inter
                       (
-                        fit: BoxFit.contain,
-                        child: Padding
-                        (
-                          padding: const EdgeInsets.all(8),
-                          child: Row
-                          (
-                            children: 
-                            [
-                              Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                              Text('Siemens TIA Portal', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
-                            ],
-                          ),
-                        ),
+                        color: Colors.grey, 
+                        fontSize: size.width > 950 ? 16 : 13,
                       ),
-                      FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Padding
-                        (
-                          padding: const EdgeInsets.all(8),
-                          child: Row
-                          (
-                            children: 
-                            [
-                              Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                              Text('Beckhoff TwinCAT', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
-                            ],
-                          ),
-                        ),
-                      ),
-                      FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Padding
-                        (
-                          padding: const EdgeInsets.all(8),
-                          child: Row
-                          (
-                            children: 
-                            [
-                              Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 20)),
-                              Text('Industial Robots', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
-                            ],
-                          ),
-                        ),
-                      ),
-                      FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Padding
-                        (
-                          padding: const EdgeInsets.all(8),
-                          child: Row
-                          (
-                            children: 
-                            [
-                              Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                              Text('Vision systems', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
-                            ],
-                          ),
-                        ),
-                      ),
-                      FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Padding
-                        (
-                          padding: const EdgeInsets.all(8),
-                          child: Row
-                          (
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: 
-                            [
-                              Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                              Text('Electrical/Electronics\ntroubleshoot', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
-                Flexible(child: SizedBox(width: 60)),
-                Flexible
+                size.width > 950 
+                ? Flexible
                 (
-                  child: Column
+                  child: Padding
                   (
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: 
-                    [
-                      FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Padding
-                        (
-                          padding: const EdgeInsets.all(8),
-                          child: Row
-                          (
-                            children: 
-                            [
-                              Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                              Text('Visual Studio C#', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
-                            ],
-                          ),
-                        ),
-                      ),
-                      FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Padding
-                        (
-                          padding: const EdgeInsets.all(8),
-                          child: Row
-                          (
-                            children: 
-                            [
-                              Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                              Text('SQL databases', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
-                            ],
-                          ),
-                        ),
-                      ),
-                      FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Padding
-                        (
-                          padding: const EdgeInsets.all(8),
-                          child: Row
-                          (
-                            children: 
-                            [
-                              Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 20)),
-                              Text('Client-Server applications', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
-                            ],
-                          ),
-                        ),
-                      ),
-                      FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Padding
-                        (
-                          padding: const EdgeInsets.all(8),
-                          child: Row
-                          (
-                            children: 
-                            [
-                              Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                              Text('Process improvemet', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
-                            ],
-                          ),
-                        ),
-                      ),
-                      FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Padding
-                        (
-                          padding: const EdgeInsets.all(8),
-                          child: Row
-                          (
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: 
-                            [
-                              Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                              Text('Project organization', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
+                    padding: const EdgeInsets.only(left: 50),
+                    child: ClipOval(child: Image.asset('me2.jpg', width: 200, height: 200)),
                   ),
-                ),
+                )
+                : SizedBox()
               ],
             ),
-          ),
-          Flexible
-          (
-            child: Padding
+            Padding
             (
               padding: const EdgeInsets.only(top: 20, bottom: 15),
-              child: Text('Hobbies', style: GoogleFonts.robotoMono(fontSize: 17, color: Colors.white, fontWeight: FontWeight.bold)),
-            )
-          ),
-          FittedBox
-          (
-            fit: BoxFit.contain,
-            child: Padding
+              child: Text('Main Skills', style: GoogleFonts.robotoMono(fontSize: 17, color: Colors.white, fontWeight: FontWeight.bold)),
+            ),
+            ConstrainedBox
             (
-              padding: const EdgeInsets.all(8),
+              constraints: BoxConstraints(maxWidth: 850),
               child: Row
               (
-                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: 
                 [
-                  Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                  Text('Traveling ✈️', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16)),
-                  SizedBox(width: 25),
-                  Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                  Text('Reading 📚', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16)),
-                  SizedBox(width: 25),
-                  Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                  Text('Videogames 🎮', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16)),
-                  SizedBox(width: 25),
-                  Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
-                  Text('Soccer ⚽', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16)),
-                  SizedBox(width: 25),
-                  Text('Programming 💻', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16)),
-                  SizedBox(width: 25)
+                  Flexible
+                  (
+                    child: Column
+                    (
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: 
+                      [
+                        FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Padding
+                          (
+                            padding: const EdgeInsets.all(8),
+                            child: Row
+                            (
+                              children: 
+                              [
+                                Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                                Text('Siemens TIA Portal', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
+                              ],
+                            ),
+                          ),
+                        ),
+                        FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Padding
+                          (
+                            padding: const EdgeInsets.all(8),
+                            child: Row
+                            (
+                              children: 
+                              [
+                                Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                                Text('Beckhoff TwinCAT', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
+                              ],
+                            ),
+                          ),
+                        ),
+                        FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Padding
+                          (
+                            padding: const EdgeInsets.all(8),
+                            child: Row
+                            (
+                              children: 
+                              [
+                                Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 20)),
+                                Text('Industial Robots', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
+                              ],
+                            ),
+                          ),
+                        ),
+                        FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Padding
+                          (
+                            padding: const EdgeInsets.all(8),
+                            child: Row
+                            (
+                              children: 
+                              [
+                                Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                                Text('Vision systems', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
+                              ],
+                            ),
+                          ),
+                        ),
+                        FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Padding
+                          (
+                            padding: const EdgeInsets.all(8),
+                            child: Row
+                            (
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: 
+                              [
+                                Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                                Text('Electrical/Electronics\ntroubleshoot', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Flexible(child: SizedBox(width: 60)),
+                  Flexible
+                  (
+                    child: Column
+                    (
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: 
+                      [
+                        FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Padding
+                          (
+                            padding: const EdgeInsets.all(8),
+                            child: Row
+                            (
+                              children: 
+                              [
+                                Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                                Text('Visual Studio C#', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
+                              ],
+                            ),
+                          ),
+                        ),
+                        FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Padding
+                          (
+                            padding: const EdgeInsets.all(8),
+                            child: Row
+                            (
+                              children: 
+                              [
+                                Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                                Text('SQL databases', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
+                              ],
+                            ),
+                          ),
+                        ),
+                        FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Padding
+                          (
+                            padding: const EdgeInsets.all(8),
+                            child: Row
+                            (
+                              children: 
+                              [
+                                Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 20)),
+                                Text('Client-Server applications', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
+                              ],
+                            ),
+                          ),
+                        ),
+                        FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Padding
+                          (
+                            padding: const EdgeInsets.all(8),
+                            child: Row
+                            (
+                              children: 
+                              [
+                                Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                                Text('Process improvemet', style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
+                              ],
+                            ),
+                          ),
+                        ),
+                        FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Padding
+                          (
+                            padding: const EdgeInsets.all(8),
+                            child: Row
+                            (
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: 
+                              [
+                                Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                                Text('Project organization', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16))
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
-          ),
-          size.width <= 950 
-          ? Padding
-          (
-            padding: const EdgeInsets.only(top: 30),
-            child: Align(alignment: Alignment.center, child: Hero(tag: 'pic', child: ClipOval(child: Image.asset('me2.jpg', width: 200, height: 200)))),
-          )
-          : Container()
-        ],
+            Padding
+            (
+              padding: const EdgeInsets.only(top: 20, bottom: 15),
+              child: Text('Hobbies', style: GoogleFonts.robotoMono(fontSize: 17, color: Colors.white, fontWeight: FontWeight.bold)),
+            ),
+            FittedBox
+            (
+              fit: BoxFit.contain,
+              child: Padding
+              (
+                padding: const EdgeInsets.all(8),
+                child: Row
+                (
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: 
+                  [
+                    Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                    Text('Traveling ✈️', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16)),
+                    SizedBox(width: 25),
+                    Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                    Text('Reading 📚', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16)),
+                    SizedBox(width: 25),
+                    Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                    Text('Videogames 🎮', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16)),
+                    SizedBox(width: 25),
+                    Text('• ', style: TextStyle(color: Colors.greenAccent, fontSize: 16)),
+                    Text('Soccer ⚽', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16)),
+                    SizedBox(width: 25),
+                    Text('Programming 💻', maxLines: 3, style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 16)),
+                    SizedBox(width: 25)
+                  ],
+                ),
+              ),
+            ),
+            size.width <= 950 
+            ? Padding
+            (
+              padding: const EdgeInsets.fromLTRB(0, 10, 20, 0),
+              child: Align(alignment: Alignment.center, child: Hero(tag: 'pic', child: ClipOval(child: Image.asset('me2.jpg', width: size.width * 0.15, height: size.width * 0.15)))),
+            )
+            : Container()
+          ],
+        ),
       ),
     );
   }

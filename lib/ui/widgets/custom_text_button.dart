@@ -39,7 +39,7 @@ class _CustomTextButtonState extends State<CustomTextButton>
             widget.text, 
             style: GoogleFonts.robotoMono
             (
-              fontSize: 20, 
+              fontSize: 16, 
               color: isHover? Colors.greenAccent : Colors.grey,
               fontWeight:  isHover? FontWeight.bold : FontWeight.normal
             )

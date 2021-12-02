@@ -1,64 +1,60 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:vertical_landing_page/providers/page_provider.dart';
 
 class DrawerMenu extends StatelessWidget 
 {
   @override
   Widget build(BuildContext context) 
   {
+    final pageProvider = Provider.of<PageProvider>(context, listen: false);
+
     return Drawer
     (  
-      child: ListView
+      child: Container
       (
-        padding: EdgeInsets.zero,
-        children: <Widget>
-        [
-          DrawerHeader
-          (
-            padding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 40.0),
-            decoration: BoxDecoration
+        color: Colors.black87,
+        child: ListView
+        (
+          padding: EdgeInsets.zero,
+          children:
+          [
+            DrawerHeader
             (
-              color: Color.fromRGBO(90, 90, 90, 1)
-            ),
-            child: Container
-            (
-              child: ListTile
+              child: Container
               (
-                leading:CircleAvatar
-                (
-                  radius:30.0,
-                  backgroundImage: AssetImage('me.png')
-                ),
-                title: Text('user', style: TextStyle(fontSize: 25.0, color: Colors.white)),
-                subtitle: Text('xxx', style: TextStyle(color: Colors.white)),
+                height: 50,
               ),
             ),
-          ),
-          /*_createSection2(context, 'incomes.png', AppLocalizations.of(context).translate('incomes'), 'Incomes'),
-          _createSection2(context, 'expenses.png', AppLocalizations.of(context).translate('expenses'), 'Expenses'),
-          _createSection2(context, 'savings.png', AppLocalizations.of(context).translate('savings'), 'Savings'),
-          _createSection2(context, 'investments.png', AppLocalizations.of(context).translate('invest'), 'Investments'),
-          _createSection2(context, 'debts.png', AppLocalizations.of(context).translate('debts'), 'Debts'),
-          _createSection2(context, 'summary.png', AppLocalizations.of(context).translate('summary'), 'Summary'),
-          _createSection2(context, 'settings.png', AppLocalizations.of(context).translate('settings'), 'Settings'),*/
-          Container
-          (
-            child: Column
-            (
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>
-              [
-                SizedBox(height: 30),
-                Image(image: AssetImage('assets/footer.png'), height: 50),
-                SizedBox(height: 5),
-                Text('Easy Finances App', style:  TextStyle(color: Theme.of(context).accentColor, fontSize: 15, letterSpacing: 3.0)),
-                Text('ver. 1.1.5', style:  TextStyle(color: Theme.of(context).accentColor, fontSize: 13, letterSpacing: 2.0)),
-                SizedBox(height: 7),
-              ],
-            ),
-          )
-        ],
+            _createSection(context, pageProvider, 'Home', 0),
+            _createSection(context, pageProvider, 'About', 1),   
+            _createSection(context, pageProvider, 'Experience', 2),   
+            _createSection(context, pageProvider, 'Projects', 3),   
+            _createSection(context, pageProvider, 'Contact', 5), 
+          ],
+        ),
       ),
+    );
+  }
+
+  Widget _createSection(BuildContext context, PageProvider provider, String name, int page)
+  {
+    return Column
+    (
+      children:
+      [
+        ListTile
+        (
+          leading: Text('0$page.', style: GoogleFonts.robotoMono(color: Colors.greenAccent, fontSize: 17)),
+          title: Text(name, style: GoogleFonts.robotoMono(color: Colors.white, fontSize: 17)),
+          onTap: ()
+          {
+            provider.goTo(page);
+            Navigator.pop(context);
+          },
+        ),
+      ],
     );
   }
 }

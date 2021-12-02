@@ -50,45 +50,49 @@ class _MainContent extends StatelessWidget
     return Container
     (
       padding: const EdgeInsets.only(left: 35, top: 50),
-      child: Column
+      child: Padding
       (
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: 
-        [
-          Row
-          (
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: 
-            [
-              FittedBox(fit: BoxFit.contain, child: Text('👋 Hi there, my name is', style: GoogleFonts.robotoMono(fontSize: 22, color: Colors.greenAccent))),
-              const Flexible(child: SizedBox(width: 30)),
-              Flexible(flex: 1, child: Image.asset('me.png', width: 200))
-            ],
-          ),
-          const SizedBox(height: 30),
-          FittedBox(fit: BoxFit.contain, child: Text('Juan Carlos Casas', maxLines: 1, overflow: TextOverflow.fade, style: GoogleFonts.robotoMono(color: Colors.white.withOpacity(0.9), fontSize: 52, fontWeight: FontWeight.bold))),
-          const SizedBox(height: 15),
-          FittedBox(fit: BoxFit.contain, child: Text('I am a mechatronics engineer', maxLines: 1, overflow: TextOverflow.fade,  style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 52, fontWeight: FontWeight.bold))),
-          const SizedBox(height: 50),
-          ConstrainedBox
-          (
-            constraints: const BoxConstraints(maxWidth: 700),
-            child: Text
+        padding: const EdgeInsets.only(right: 20),
+        child: Column
+        (
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: 
+          [
+            Row
             (
-              'I\'m a 30 years old guy living and working in Kentucky 🇺🇸\n\n' +
-              'I am a self-taught person passionate about new technologies and challenges 🚀\n\n',
-              maxLines: 8,
-              overflow: TextOverflow.ellipsis,
-              style: GoogleFonts.inter
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: 
+              [
+                FittedBox(fit: BoxFit.contain, child: Text('👋 Hello, my name is', style: GoogleFonts.robotoMono(fontSize: 22, color: Colors.greenAccent))),
+                const Flexible(child: SizedBox()),
+                Flexible(flex: 2, child: Image.asset('me.png', width: 200))
+              ],
+            ),
+            const SizedBox(height: 30),
+            FittedBox(fit: BoxFit.contain, child: Text('Juan Carlos Casas', maxLines: 1, overflow: TextOverflow.fade, style: GoogleFonts.robotoMono(color: Colors.white.withOpacity(0.9), fontSize: 52, fontWeight: FontWeight.bold))),
+            const SizedBox(height: 15),
+            FittedBox(fit: BoxFit.contain, child: Text('I am a mechatronics engineer', maxLines: 1, overflow: TextOverflow.fade,  style: GoogleFonts.robotoMono(color: Colors.grey, fontSize: 52, fontWeight: FontWeight.bold))),
+            const SizedBox(height: 50),
+            ConstrainedBox
+            (
+              constraints: const BoxConstraints(maxWidth: 700),
+              child: Text
               (
-                color: Colors.white, 
-                fontSize: 22,
-                letterSpacing: 1.5,
+                'I\'m a 30 years old guy living and working in Kentucky 🇺🇸\n\n' +
+                'I am a self-taught person passionate about new technologies and challenges 🚀\n\n',
+                maxLines: 8,
+                overflow: TextOverflow.ellipsis,
+                style: GoogleFonts.inter
+                (
+                  color: Colors.white, 
+                  fontSize: 22,
+                  letterSpacing: 1.5,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

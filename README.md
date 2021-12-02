@@ -1,6 +1,6 @@
-# vertical_landing_page
+# Personal Portfolio
 
-A new Flutter project.
+A personal portfolio landing page built with Flutter.
 
 ## Getting Started
 

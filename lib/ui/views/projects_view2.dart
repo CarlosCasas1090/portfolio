@@ -32,7 +32,7 @@ class _MainContent extends StatelessWidget
 
     return Container
     (
-      padding: const EdgeInsets.only(left: 35, top: 50),
+      padding: const EdgeInsets.only(left: 35, top: 20),
       child: Column
       (
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,8 +46,8 @@ class _MainContent extends StatelessWidget
             (
               children: 
               [
-                size.width > 850
-                ? Image.asset('itg.png', width: 600, height: size.height * 0.3)
+                size.width > 1200
+                ? Image.asset('labels.png', width: 600, height: size.height * 0.35)
                 : Container(),
                 Container
                 (
@@ -63,7 +63,7 @@ class _MainContent extends StatelessWidget
                       ),
                       Text
                       (
-                        'Temperature Tracking',
+                        'Labels Dispenser',
                         style: GoogleFonts.inter(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)
                       ),
                       SizedBox(height: 20),
@@ -73,11 +73,29 @@ class _MainContent extends StatelessWidget
                         width: 1200,
                         height: size.height * 0.2,
                         color: Colors.black.withOpacity(0.3),
-                        child: Text
+                        child: Column
                         (
-                          'project info\n update lorem impsusd', 
-                          style: GoogleFonts.inter(fontSize: 19, color: Colors.grey),
-                          textAlign: TextAlign.end,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: 
+                          [
+                            FittedBox
+                            (
+                              fit: BoxFit.contain,
+                              child: Text
+                              (
+                                'Lightweight application to print labels used on finished products.\nCommuniactes to a Sato or Zebra printer through TCP protocol and\n sends label data of the desired part number, then automatically emails\nto supervisors and managers of what was printed', 
+                                style: GoogleFonts.inter(fontSize: 19, color: Colors.white),
+                                textAlign: TextAlign.end,
+                              ),
+                            ),
+                            Flexible(child: SizedBox(height: 20)),
+                            Text
+                            (
+                              '• C#  • Sato AllinOne  • TCP protocol', 
+                              style: GoogleFonts.inter(fontSize: 12, color: Colors.greenAccent),
+                              textAlign: TextAlign.end,
+                            ),
+                          ],
                         ),
                       )
                     ],
@@ -98,8 +116,8 @@ class _MainContent extends StatelessWidget
               (
                 children: 
                 [
-                  size.width > 850
-                  ? Align(alignment: Alignment.centerRight, child: Image.asset('itg.png', width: 600, height: size.height * 0.3))
+                  size.width > 1200
+                  ? Align(alignment: Alignment.centerRight, child: Image.asset('scan.png', width: 600, height: size.height * 0.35))
                   : Container(),
                   Container
                   (
@@ -115,7 +133,7 @@ class _MainContent extends StatelessWidget
                         ),
                         Text
                         (
-                          'Software Update',
+                          'Finished Goods Track',
                           style: GoogleFonts.inter(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)
                         ),
                         SizedBox(height: 20),
@@ -124,12 +142,30 @@ class _MainContent extends StatelessWidget
                           padding: EdgeInsets.all(20),
                           width: 1200,
                           height: size.height * 0.2,
-                          color: Colors.black.withOpacity(0.2),
-                          child: Text
+                          color: Colors.black.withOpacity(0.3),
+                          child: Column
                           (
-                            'project info\n update lorem impsusd', 
-                            style: GoogleFonts.inter(fontSize: 19, color: Colors.grey),
-                            textAlign: TextAlign.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: 
+                            [
+                              FittedBox
+                              (
+                                fit: BoxFit.contain,
+                                child: Text
+                                (
+                                  'Software to scan and save on a DB every finished part\nbarcode, this way every single piece can be tracked, improving\nquality and control. Once the shipping container is full of parts\nall data is sent to print a shipping label', 
+                                  style: GoogleFonts.inter(fontSize: 19, color: Colors.white),
+                                  textAlign: TextAlign.start,
+                                ),
+                              ),
+                              Flexible(child: SizedBox(height: 20)),
+                              Text
+                              (
+                                '• SQL  • C#  • Datalogic', 
+                                style: GoogleFonts.inter(fontSize: 12, color: Colors.greenAccent),
+                                textAlign: TextAlign.end,
+                              ),
+                            ],
                           ),
                         )
                       ],
